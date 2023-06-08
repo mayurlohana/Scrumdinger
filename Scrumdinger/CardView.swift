@@ -14,12 +14,15 @@ struct CardView: View {
         VStack {
             Text(scrum.title)
                 .font(.headline)
+                .accessibilityAddTraits(.isHeader)
             Spacer()
             HStack {
                 Label("\(scrum.attendes.count)", systemImage: "person.3")
+                    .accessibilityLabel("\(scrum.attendes.count) attendees")
                 Spacer()
                 Label("\(scrum.lengthInMinutes)", systemImage: /*@START_MENU_TOKEN@*/"clock"/*@END_MENU_TOKEN@*/)
-                    .padding(.trailing, 20)
+                    .accessibilityLabel("\(scrum.lengthInMinutes) minute meeting")
+                    .labelStyle(.trailingIcon)
             }
             .font(.caption)
         }
