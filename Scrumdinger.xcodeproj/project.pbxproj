@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B36831F2A35320500F82F6C /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B36831E2A35320500F82F6C /* ThemeView.swift */; };
 		7B4317D32A3268CC00084E92 /* ScrumdingerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4317D22A3268CC00084E92 /* ScrumdingerApp.swift */; };
 		7B4317D52A3268CC00084E92 /* MeetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4317D42A3268CC00084E92 /* MeetingView.swift */; };
 		7B4317D72A3268CE00084E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B4317D62A3268CE00084E92 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B36831E2A35320500F82F6C /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
 		7B4317CF2A3268CC00084E92 /* Scrumdinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrumdinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4317D22A3268CC00084E92 /* ScrumdingerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumdingerApp.swift; sourceTree = "<group>"; };
 		7B4317D42A3268CC00084E92 /* MeetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				7B4317FD2A3275F100084E92 /* Models */,
 				7B4317D22A3268CC00084E92 /* ScrumdingerApp.swift */,
 				7B57765E2A33AFCF00657E30 /* DetailedEditView.swift */,
+				7B36831E2A35320500F82F6C /* ThemeView.swift */,
 				7B4318022A327B0D00084E92 /* CardView.swift */,
 				7B6F22012A328F310064298A /* ScrumsView.swift */,
 				7B57765B2A339D6B00657E30 /* DetailView.swift */,
@@ -296,6 +299,7 @@
 				7B57765F2A33AFCF00657E30 /* DetailedEditView.swift in Sources */,
 				7B4317D52A3268CC00084E92 /* MeetingView.swift in Sources */,
 				7B4317D32A3268CC00084E92 /* ScrumdingerApp.swift in Sources */,
+				7B36831F2A35320500F82F6C /* ThemeView.swift in Sources */,
 				7B4318032A327B0D00084E92 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
