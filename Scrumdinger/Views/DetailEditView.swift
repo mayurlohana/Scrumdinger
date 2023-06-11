@@ -1,12 +1,10 @@
-/*
- See LICENSE folder for this sample’s licensing information.
- */
-
 import SwiftUI
+
 
 struct DetailEditView: View {
     @Binding var scrum: DailyScrum
     @State private var newAttendeeName = ""
+
 
     var body: some View {
         Form {
@@ -48,6 +46,7 @@ struct DetailEditView: View {
         }
     }
 }
+
 
 struct DetailEditView_Previews: PreviewProvider {
     static var previews: some View {
