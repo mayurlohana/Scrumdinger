@@ -11,7 +11,7 @@ import Foundation
 struct DailyScrum: Identifiable {
     let id: UUID
     var title: String
-    var attendes: [Attendee]
+    var attendees: [Attendee]
     var lengthInMinutes: Int
     var lengthInMinutesAsDouble: Double {
         get {
@@ -24,10 +24,10 @@ struct DailyScrum: Identifiable {
     }
     var theme: Theme
     
-    init(id: UUID = UUID(), title: String, attendes: [String], lengthInMinutes: Int, theme: Theme) {
+    init(id: UUID = UUID(), title: String, attendees: [String], lengthInMinutes: Int, theme: Theme) {
         self.id = id
         self.title = title
-        self.attendes = attendes.map { Attendee(name: $0) } 
+        self.attendees = attendees.map { Attendee(name: $0) }
         self.lengthInMinutes = lengthInMinutes
         self.theme = theme
     }
@@ -45,7 +45,7 @@ extension DailyScrum {
     }
     
     static var emptyScrum: DailyScrum {
-        DailyScrum(title: "", attendes: [], lengthInMinutes: 5, theme: .sky)
+        DailyScrum(title: "", attendees: [], lengthInMinutes: 5, theme: .sky)
     }
 }
 
@@ -53,15 +53,15 @@ extension DailyScrum {
     static let sampleData: [DailyScrum] =
     [
         DailyScrum(title: "Design",
-                   attendes: ["Cathy", "Daisy", "Simon", "Jonathan"],
+                   attendees: ["Cathy", "Daisy", "Simon", "Jonathan"],
                    lengthInMinutes: 10,
                    theme: .yellow),
         DailyScrum(title: "App Dev",
-                   attendes: ["Katie", "Gray", "Euna", "Luis", "Darla"],
+                   attendees: ["Katie", "Gray", "Euna", "Luis", "Darla"],
                    lengthInMinutes: 10,
                    theme: .orange),
         DailyScrum(title: "Web Dev",
-                   attendes: ["Chella", "Chris", "Christina", "Eden", "Karla", "Lindsey", "Aga", "Chad", "Jenn", "Sarah"],
+                   attendees: ["Chella", "Chris", "Christina", "Eden", "Karla", "Lindsey", "Aga", "Chad", "Jenn", "Sarah"],
                    lengthInMinutes: 10,
                    theme: .poppy)
         

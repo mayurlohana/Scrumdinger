@@ -1,16 +1,13 @@
-//
-//  DetailedEditView.swift
-//  Scrumdinger
-//
-//  Created by Mayur Lohana on 6/10/23.
-//
+/*
+ See LICENSE folder for this sample’s licensing information.
+ */
 
 import SwiftUI
 
-struct DetailedEditView: View {
-    @State private var scrum = DailyScrum.emptyScrum
+struct DetailEditView: View {
+    @Binding var scrum: DailyScrum
     @State private var newAttendeeName = ""
-    
+
     var body: some View {
         Form {
             Section(header: Text("Meeting Info")) {
@@ -24,24 +21,26 @@ struct DetailedEditView: View {
                     Text("\(scrum.lengthInMinutes) minutes")
                         .accessibilityHidden(true)
                 }
+                ThemePicker(selection: $scrum.theme)
             }
             Section(header: Text("Attendees")) {
-                ForEach(scrum.attendes) { attendee in
+                ForEach(scrum.attendees) { attendee in
                     Text(attendee.name)
                 }
                 .onDelete { indices in
-                    scrum.attendes.remove(atOffsets: indices)
+                    scrum.attendees.remove(atOffsets: indices)
                 }
                 HStack {
                     TextField("New Attendee", text: $newAttendeeName)
                     Button(action: {
                         withAnimation {
                             let attendee = DailyScrum.Attendee(name: newAttendeeName)
-                            scrum.attendes.append(attendee)
+                            scrum.attendees.append(attendee)
                             newAttendeeName = ""
                         }
                     }) {
                         Image(systemName: "plus.circle.fill")
+                            .accessibilityLabel("Add attendee")
                     }
                     .disabled(newAttendeeName.isEmpty)
                 }
@@ -50,8 +49,8 @@ struct DetailedEditView: View {
     }
 }
 
-struct DetailedEditView_Previews: PreviewProvider {
+struct DetailEditView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailedEditView()
+        DetailEditView(scrum: .constant(DailyScrum.sampleData[0]))
     }
 }
