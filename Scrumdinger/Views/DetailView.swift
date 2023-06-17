@@ -4,7 +4,6 @@ import SwiftUI
 struct DetailView: View {
     @Binding var scrum: DailyScrum
 
-
     @State private var editingScrum = DailyScrum.emptyScrum
     @State private var isPresentingEditView = false
     
